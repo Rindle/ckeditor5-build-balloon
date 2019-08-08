@@ -22,11 +22,14 @@ import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
-import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+// import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave';
+import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import PendingActions from '@ckeditor/ckeditor5-core/src/pendingactions';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -48,11 +51,14 @@ BalloonEditor.builtinPlugins = [
 	ImageUpload,
 	Link,
 	List,
-	MediaEmbed,
+	// MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Autosave,
+	Mention,
+	PendingActions
 ];
 
 // Editor configuration.
@@ -60,7 +66,7 @@ BalloonEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'|',
+			// '|',
 			'bold',
 			'italic',
 			'link',
@@ -69,16 +75,16 @@ BalloonEditor.defaultConfig = {
 			'imageUpload',
 			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
+			// 'mediaEmbed',
+			// 'undo',
+			// 'redo'
 		]
 	},
 	image: {
 		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
+			// 'imageStyle:full',
+			// 'imageStyle:side',
+			// '|',
 			'imageTextAlternative'
 		]
 	},
